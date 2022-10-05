@@ -1,0 +1,77 @@
+h1 {
+    color: rgb(16, 24, 83);
+    font-size: 5em;
+    text-align: center;
+}
+
+#main-image {
+    width: 100%;
+}
+
+h2 {
+    color: #000;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+p {
+    color: #000;
+    font-size: 2em;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 62.5em;
+}
+
+.fruites {
+    display: flex;
+    justify-content: space-around;
+    margin: 0.625em;
+}
+
+.imatges {
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+    border: 0.2em solid black;
+    border-radius: 10%;
+    margin: 1em;
+    padding: 0.2em;
+}
+
+legend {
+    font-size: 2em;
+}
+
+label {
+    font-size: 1.5em;
+}
+
+fieldset {
+    border-width: 0.625em;
+    background-color: rgb(215, 193, 138);
+}
+
+.enviar {
+    font-size: 1.3em;
+    color: cornsilk;
+    background-color: darkgreen;
+}
+
+.enviar:hover {
+    background-color: #B60407;
+    border-width: 0.313em;
+    border-color: white;
+}
+
+li:hover {
+    background-color: darkgoldenrod;
+}
+
+li:focus {
+    background-color: darkgoldenrod;
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="center-text">
+            <span class="titulo-dom">D</span>ocument
+            <span class="titulo-dom">O</span>bject
+            <span class="titulo-dom">M</span>odel
+        </h1>
+    </header>
+    <main>
+        <section id="teoria">
+            <div class="opcionesMenu">
+                <h2 id="definiciones">1. Definiciones</h2>
+            </div>
+            <article id="r-definiciones" class="div-oculto">
+                <article>
+                    <p class="pregunta">El DOM es...</p>
+                    <div id="r-dom" class="div-oculto">
+                        <p class="respuesta">la estructura del documento HTML, desarrollada mediante un API para
+                            interactuar con los nodos de una página web.</p>
+                        <p class="respuesta">Aunque el desarrollador la codifica con etiquetas de apertura y cierre que
+                            se pueden anidar (como cajas que contienen otras cajas), para el navegador se trata de una
+                            estuctura jerárquica, similar a un árbol genealógico.</p>
+                        <div class="dos-imagenes">
+                            <img class="h-200" src="img/caixes DOM.jpg" alt="cajas con etiquetas html">
+                            <img class="h-200" src="img/1200px-DOM-model.svg.png" alt="modelo dom">
+                        </div>
+                    </div>
+                    <button id="dom" class="preguntas">Mostrar respuesta</button>
+                </article>
+
+                <article>
+                    <p class="pregunta">El objeto <em>window</em>...</p>
+                    <div id="r-window" class="div-oculto">
+                        <p class="respuesta">representa la ventana o pestaña actual.</p>
+                    </div>
+                    <button id="window" class="preguntas">Mostrar respuesta</button>
+                </article>
+
+                <article>
+                    <p class="pregunta">El objeto <em>document</em>...</p>
+                    <div id="r-document" class="div-oculto">
+                        <p class="respuesta">es donde se carga la página web. Está contenido en <em>window</em>. </p>
+                    </div>
+                    <button id="document" class="preguntas">Mostrar respuesta</button>
+                </article>
+
+                <article>
+                    <p class="pregunta"><em>Nodes</em> son...</p>
+                    <div id="r-nodes" class="div-oculto">
+                        <p class="respuesta">todos los objetos que contiene el documento: etiquetas(tags), atributos y
+                            texto.
+                        </p>
+                    </div>
+                    <button id="nodes" class="preguntas">Mostrar respuesta</button>
+                </article>
+
+                <article>
+                    <p class="pregunta"><em>Elements</em> son...</p>
+                    <div id="r-elements" class="div-oculto">
+                        <p class="respuesta">los diferentes tipos de nodo: HTMLElement, HTMLTableElement, etc.</p>
+                    </div>
+                    <button id="elements" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta">Un <em>nodeList</em> es...</p>
+                    <div id="r-nodelist" class="div-oculto">
+                        <p class="respuesta">un pseudo-array de <em>elements</em>, es decir, se trata de una colección
+                            de
+                            ítems que a pesar de no ser exactamente un array, se les pueden aplicar algunos de los
+                            métodos
+                            propios de los arrays, como los bucles. </p>
+                    </div>
+                    <button id="nodelist" class="preguntas">Mostrar respuesta</button>
+                </article>
+            </article>
+
+            <div class="opcionesMenu">
+                <h2 id="selectores">2. Selectores</h2>
+            </div>
+            <article id="r-selectores" class="div-oculto">
+                <article>
+                    <p class="pregunta">document.<em>getElementsByTagName('nombre_de_la_etiqueta')</em></p>
+                    <div id="r-tagname" class="div-oculto">
+                        <p class="respuesta">Retorna los nodos segun su etiqueta (h1, p, etc.).</p>
+                        <p class="respuesta">Se aconseja utilizar <em>querySelectorAll()</em> en su lugar.</p>
+                    </div>
+                    <button id="tagname" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta">document.<em>getElementsByClassName('nombre_de_la_classe')</em></p>
+                    <div id="r-classname" class="div-oculto">
+                        <p class="respuesta">Retorna los nodos segun el nombre de su clase.</p>
+                        <p class="respuesta">Se aconseja utilizar <em>querySelectorAll()</em> en su lugar.</p>
+                    </div>
+                    <button id="classname" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta">document.<em>getElementById('nombre_del_id')</em></p>
+                    <div id="r-idname" class="div-oculto">
+                        <p class="respuesta">Retorna el nodo segun el nombre de su id.</p>
+                        <p class="respuesta">Para seleccionar <em>id</em>s es la forma recomendada, antes que
+                            <em>querySelector('#nombre_de_id')</em> ya que ofrece mejor rendimiento.
+                        </p>
+                    </div>
+                    <button id="idname" class="preguntas">Mostrar respuesta</button>
+                </article>
+
+                <article>
+                    <p class="pregunta">
+                        document.<em>querySelector('nombre_del_elemento')</em>
+                    </p>
+                    <div id="r-queryselector" class="div-oculto">
+                        <p class="respuesta">Retorna el <ins>primer nodo</ins> segun el nombre
+                            de indicado entre comillas. Si no existe devuelve <em>null</em>. </p>
+                        <p class="respuesta">Cuando se trate de un id o una clase hay que incluir al principio los
+                            caracteres # (almohadilla) o . (punto), respectivamente.
+                        </p>
+                    </div>
+                    <button id="queryselector" class="preguntas">Mostrar
+                        respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta">
+                        document.<em>querySelectorAll('nombre_de_los_elementos')</em>
+                    </p>
+                    <div id="r-queryselectorall" class="div-oculto">
+                        <p class="respuesta">
+                            Retorna los nodos según el criterio especificado: etiquetas, clases o combinaciones entre
+                            ellas.
+                        </p>
+
+                    </div>
+                    <button id="queryselectorall" class="preguntas">Mostrar
+                        respuesta</button>
+                </article>
+                <article>
+                    <p class="respuesta">Nota: Cuando se trate de un id o una clase hay que incluir al principio los
+                        caracteres # (almohadilla) o . (punto), respectivamente.
+                    </p>
+                </article>
+            </article>
+
+
+            <div class="opcionesMenu">
+                <h2 id="ejemplos">3. Ejemplos de selecciones</h2>
+            </div>
+
+            <article id="r-ejemplos" class="div-oculto">
+                <article>
+                    <p class="pregunta">Seleccionar todos los títulos h2</p>
+                    <div id="r-ejemplo1" class="div-oculto">
+                        <p class="respuesta">let ejemplo = document.querySelectorAll('h2');</p>
+                    </div>
+                    <button id="ejemplo1" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta">Seleccionar todos los títulos h2 y h3</p>
+                    <div id="r-ejemplo2" class="div-oculto">
+                        <p class="respuesta">let ejemplo = document.querySelectorAll('h2, h3');</p>
+                    </div>
+                    <button id="ejemplo2" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta">Seleccionar todos los títulos h2 y h3 que tienen clase 'ejemplos'</p>
+                    <div id="r-ejemplo3" class="div-oculto">
+                        <p class="respuesta">let ejemplo = document.querySelectorAll('h2.ejemplos, h3.ejemplos');</p>
+                    </div>
+                    <button id="ejemplo3" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta">Seleccionar el primer div contenido en la section con clase 'teoria' y poner el
+                        color de su texto a rojo.</p>
+                    <div id="r-ejemplo4" class="div-oculto">
+                        <p class="respuesta">let ejemplo = document.querySelector('section.teoria div');</p>
+                        <p class="respuesta">ejemplo.style.color = 'red';</p>
+                    </div>
+                    <button id="ejemplo4" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta">Seleccionar todos los div contenidos en la
+                        section con clase 'teoria'</p>
+                    <div id="r-ejemplo5" class="div-oculto">
+                        <p class="respuesta">let ejemplo =
+                            document.querySelectorAll('section.teoria div');</p>
+                    </div>
+                    <button id="ejemplo5" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta">Seleccionar todos los div cuyo padre es la
+                        section con clase 'teoria' y poner su color de fondo en amarillo.</p>
+                    <div id="r-ejemplo6" class="div-oculto">
+                        <p class="respuesta">let ejemplo =
+                            document.querySelectorAll('section.teoria >div');</p>
+                        <p> ejemplo.forEach(item => {
+                            item.style.backgroundColor = 'yellow';
+                            })</p>
+
+                    </div>
+                    <button id="ejemplo6" class="preguntas">Mostrar respuesta</button>
+                </article>
+            </article>
+
+
+            <div class="opcionesMenu">
+                <h2 id="traversing">4. DOM traversing</h2>
+            </div>
+            <article id="r-traversing" class="div-oculto">
+                <article>
+                    <p class="pregunta"><em>Dom traversing</em> se refiere a recorrer el DOM de forma contextual, a
+                        partir de una selección previa, mediante las relaciones de parentesco entre los elementos:
+                        padres, hijos, hermanos, pero también es posible, abuelos, nietos...</p>
+                </article>
+                <article>
+                    <p class="pregunta"><em>parentNode</em></p>
+                    <div id="r-parentnode" class="div-oculto">
+                        <p class="respuesta">Devuelve el nodo padre. Ejemplo:</p>
+                        <p>const nodo = document.querySelector('.opcionesMenu');
+                        <p>const nodoPadre = nodo.parentNode;</p>
+                        <p>console.log('nodo padre: ', nodoPadre);</p>
+                        <p>Devuelve:</p>
+                        <p> &lt;section id="teoria"&gt;&lt;/section&gt; </p>
+                    </div>
+                    <button id="parentnode" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta"><em>parentElement</em></p>
+                    <div id="r-parentelement" class="div-oculto">
+                        <p class="respuesta">Devuelve el elemento padre. Ejemplo:</p>
+                        <p>const nodo = document.querySelector('.opcionesMenu');
+                        <p>const elementoPadre = nodo.parentElement;</p>
+                        <p>console.log('elemento padre: ', elementoPadre);</p>
+                        <p>Devuelve:</p>
+                        <p> &lt;section id="teoria"&gt;&lt;/section&gt; </p>
+                        <p>En esto caso el resultado es el mismo que con <em>parentNode</em>.</p>
+                    </div>
+                    <button id="parentelement" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta"><em>childNodes</em></p>
+                    <div id="r-childnodes" class="div-oculto">
+                        <p class="respuesta">Devuelve los nodos hijos si existen. Ejemplo:</p>
+                        <p>var nodeList = elementNodeReference.childNodes;</p>
+                        <p>Al primer nodo se le asigna el índice 0.</p>
+                        <p>Como se trata de nodos devuelve etiquetas y también textos si hay.</p>
+                    </div>
+                    <button id="childnodes" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta"><em>firstChild</em></p>
+                    <div id="r-firstchild" class="div-oculto">
+                        <p class="respuesta">Devuelve el primer nodo hijo. Ejemplo:</p>
+                        <p>En HTML:</p>
+                        <p>&lt;ul&gt;</p>
+                        <p>&lt;li&gt;Soy el primer hijo&lt;li&gt;</p>
+                        <p>&lt;li&gt;Soy el último hijo&lt;li&gt;</p>
+                        <p>&lt;/ul&gt;</p>
+                        <p>En javascript:</p>
+                        <p>const ul = document.querySelector('ul')</p>
+                        <p>console.log(ul.firstChild)</p>
+                        <p>Devuelve</p>
+                        <p>&lt;li&gt;Soy el primer hijo&lt;li&gt;</p>
+                    </div>
+                    <button id="firstchild" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta"><em>lastChild</em></p>
+                    <div id="r-lastchild" class="div-oculto">
+                        <p class="respuesta">Devuelve el último nodo hijo. Ejemplo:</p>
+                        <p>En HTML:</p>
+                        <p>&lt;ul&gt;</p>
+                        <p>&lt;li&gt;Soy el primer hijo&lt;li&gt;</p>
+                        <p>&lt;li&gt;Soy el último hijo&lt;li&gt;</p>
+                        <p>&lt;/ul&gt;</p>
+                        <p>En javascript:</p>
+                        <p>const ul = document.querySelector('ul')</p>
+                        <p>console.log(ul.firstChild)</p>
+                        <p>Devuelve</p>
+                        <p>&lt;li&gt;Soy el último hijo&lt;li&gt;</p>
+                    </div>
+                    <button id="lastchild" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta"><em>lastChild</em></p>
+                    <div id="r-previoussibling" class="div-oculto">
+                        <p class="respuesta">Devuelve el nodo previo en la lista de nodos hermanos.</p>
+                    </div>
+                    <button id="previoussibling" class="preguntas">Mostrar respuesta</button>
+                </article>
+                <article>
+                    <p class="pregunta"><em>lastChild</em></p>
+                    <div id="r-nextsibling" class="div-oculto">
+                        <p class="respuesta">Devuelve el nodo siguiente en la lista de nodos hermanos.</p>
+                    </div>
+                    <button id="nextsibling" class="preguntas">Mostrar respuesta</button>
+                </article>
+            </article>
+
+
+
+
+            <div class="opcionesMenu">
+                <h2 id="ejercicios">5. Ejercicios</h2>
+            </div>
+                <article id="r-ejercicios" class="div-oculto">
+                    <p class="pregunta">Convierte esta página en modo "noche".</p>
+                    <p class="pregunta">El fondo debe ser gris oscuro #2a2c2e.</p>
+                    <p class="pregunta">El texto debe ser gris claro #f2f2f2.</p>
+                    <p class="pregunta">El texto en cursiva (em) en color rojo.</p>
+                    </article>
+
+            
+        </section>
+    </main>
+    <footer>
+        <p class="center-text">Francisco Díaz</p>
+    </footer>
+</body>
+<script src="dom.js"></script>
+
+</html>

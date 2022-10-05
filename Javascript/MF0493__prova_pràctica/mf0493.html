@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica DOM</title>
+    <link rel="stylesheet" href="css/mf0493.css">
+</head>
+
+<body>
+    <header>
+        <h1>Práctica DOM</h1>
+        <p><em>Cada parte tiene instrucciones de realización distintas. Leelas completamente antes de resolver cada una
+                de ellas.</em></p>
+    </header>
+    <main>
+        <section>
+            <article class="prueba">
+                <div class="texto">
+                    <h2>PARTE 1 (5 puntos): subir una página web a un servidor</h2>
+                    <p>Nota : si por problemas técnicos de la conexión no pudiera realizarse esta prueba habrá que hacer
+                        necesariamente la OPCIÓN 2</p>
+                    <p>Sube una página web en formato HTML a uno de los dos servidores en los que hemos creado cuenta
+                        (CDMON o InfintyFree).</p>
+
+                    <p>En la página debe constar solo como título h1 tu nombre de esta forma:</p>
+                    <p>TRES primeras letras de tu primer nombre + TRES primeras letras de tu primer apellido.</p>
+                    <p>Ejemplo 1: alumno JUAn Ramón JÍMenez -> JUA+JIM</p>
+                    <p>Nota: por motivos de privacidad no pondremos el nombre completo real</p>
+                    <p>La página se llamará alumno+el identificador anterior. Ejemplo:<em>alumno-juajim.html</em></p>
+                    <p>Hay que hacer las siguientes capturas de pantalla (con la herramienta recortes de Windows, por
+                        ejemplo):</p>
+                    <p>1. Cuando accedes al servidor</p>
+                    <img class="pantalles" src="img/pantalla_1.jpg" alt="pantalla 1">
+                    <p>2. Antes de entrar al panel de control</p>
+                    <img class="pantalles" src="img/pantalla_2.jpg" alt="pantalla 2">
+                    <p>3. En el panel de control</p>
+                    <img class="pantalles" src="img/pantalla_3.jpg" alt="pantalla 3">
+                    <p>3. Cuando hayas subido el fichero html</p>
+                    <img class="pantalles" src="img/pantalla_5.jpg" alt="pantalla 5">
+                    <p>4. La visualización de la página desde tu sitio web</p>
+                    <img class="pantalles" src="img/pantalla_6.jpg" alt="pantalla 6">
+                </div>
+            </article>
+
+        </section>
+        <section>
+            <article class="prueba">
+                <div class="texto">
+                    <h2>OPCIÓN 2 (5 puntos): EVENTOS Y MANEJO DEL DOM</h2>
+                    <p>1. Ordena de menor a mayor (en sentido descendente) las cantidades de la siguiente lista, cuando
+                        se haga click con el botón.
+                    </p>
+
+                </div>
+                <h3>Población de Barcelona desde 1996 hasta 2021</h3>
+                <ul class="lista-población-bcn">
+                    <li>5.542.680</li>
+                    <li>4.804.606 </li>
+                    <li>5.529.099</li>
+                    <li>5.714.730 </li>
+                    <li>5.309.404 </li>
+                    <br><br>
+                    <button id="button-bcn">Ordena de menor a mayor</button>
+                </ul>
+            </article>
+
+        </section>
+
+
+
+
+
+        <section>
+            <article class="prueba">
+                <div class="texto">
+                    <p id="e-7">Al hacer click sobre la imagen, recupera el valor de los atributos "prop1", "prop2",
+                        "prop3" y "prop4" y muéstralos dentro de la etiqueta p con id="answer"
+                    </p>
+                </div>
+
+                <div id="imagen">
+
+                    <img src="img/imthebest.jpg" alt="imthebest" prop1="I " prop2="am " prop3="the " prop4="best !!!">
+
+                </div>
+
+                <p class="text">Who am I?</p>
+                <p id="answer" class="text"></p>
+
+            </article>
+        </section>
+
+    </main>
+    <footer>
+        <p>Francisco Diaz</p>
+    </footer>
+</body>
+<script src="js/mf0493.js"></script>
+
+</html>

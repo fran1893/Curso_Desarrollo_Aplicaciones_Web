@@ -1,0 +1,74 @@
+.container {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+
+
+.centrar {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+
+.monedas {
+    width: 20%;
+}
+
+
+
+.imagenes {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+#tablero {
+    display: none;
+}
+
+
+
+.button {
+    width: 50%;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 3px 3px #999;
+}
+
+
+
+.button:hover {
+    background-color: #3e8e41
+}
+
+
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

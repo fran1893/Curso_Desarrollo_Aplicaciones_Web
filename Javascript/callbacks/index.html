@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <h1>No se puede dividir por cero!</h1>
+
+    <p id="resultado">0.00</p>
+    <form action="">
+        <label for="valor_1">Primer valor: </label>
+        <input type="number" id="valor_1">
+        <br>
+        <label for="valor_2">Segundo valor: </label>
+        <input type="number" id="valor_2">
+        <br>
+        <fieldset>
+            <legend>Elegir Operación:</legend>
+            <input type="radio" id="suma" name="operacion" value="suma">
+            <label for="suma">Suma</label>
+            <br>
+            <input type="radio" id="resta" name="operacion" value="resta">
+            <label for="resta">Resta</label>
+            <br>
+            <input type="radio" id="multiplicacion" name="operacion" value="multiplicacion">
+            <label for="multiplicacion">Multiplicación</label>
+            <br>
+            <input type="radio" id="division" name="operacion" value="division">
+            <label for="division">División</label>
+            <br>
+            <button type="button" onclick="calculadora()">Resultado</button>
+        </fieldset>
+    </form>
+    <script src="calculadora.js"></script>
+</body>
+
+</html>

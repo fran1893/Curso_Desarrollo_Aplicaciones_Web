@@ -1,0 +1,21 @@
+p {
+    font-size: 2em;
+    text-align: center;
+
+}
+
+button {
+    font-size: 2rem;;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.divBoto {
+    display: flex;
+    justify-content: space-around;
+}

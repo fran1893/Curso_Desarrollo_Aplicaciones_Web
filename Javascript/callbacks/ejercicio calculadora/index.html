@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <p id="resultado">0.00</p>
+
+    <form>
+        <label for="valor_1">Valor 1</label>
+        <input type="number" id="valor_1">
+        <label for="valor_2">Valor 2</label>
+        <input type="number" id="valor_2">
+
+        <p>
+            <label for="suma">Suma</label>
+            <input type="radio" name="operacion" value="suma" id="suma">
+
+            <label for="resta">Resta</label>
+            <input type="radio" name="operacion" value="resta" id="resta">
+
+            <label for="multiplicacion">Multiplicación</label>
+            <input type="radio" name="operacion" value="multiplicacion" id="multiplicacion">
+
+            <label for="division">División</label>
+            <input type="radio" name="operacion" value="division" id="division">
+        </p>
+
+        <input id="boton" type="button" value="Calcular" />
+    </form>
+
+    <script src="java.js"></script>
+</body>
+
+</html>

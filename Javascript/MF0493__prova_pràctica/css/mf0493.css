@@ -1,0 +1,62 @@
+body {
+    font-size: 1.2rem;
+}
+
+header {
+    text-align: center;
+    color:white;
+    background-color: black;
+    margin-top: 0;
+
+}
+main {
+    margin: 3em auto;
+    width: 800px;
+    margin-bottom: 6em;
+}
+
+.prueba {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.texto {
+    background-color: #0000CD;
+    color: white;
+    padding: 20px;
+}
+
+.pantalles {
+    width: 100%;
+    text-align: center;
+}
+
+#imagen {
+    text-align: center;
+    padding: 2em;
+}
+
+.text {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold
+}
+#answer {
+    color: red;
+    font-size: 4em;
+}
+
+form {
+    margin-top: 2em;
+}
+footer {
+    
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    color:white;
+    background-color: black;
+    width: 100%;
+}

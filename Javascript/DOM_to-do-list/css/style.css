@@ -1,0 +1,84 @@
+body, 
+h1,
+h2,
+p,
+div {
+    margin :0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 600px;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+form {
+    margin-top: 2em;
+    
+}
+input {
+    width: 90%;
+    height: 40px;
+    border: 2px solid #943126;
+    border-radius: 10px;
+}
+button {
+    width: 90%;
+    height: 40px;
+    color: white;
+    background-color: #21618C;
+    border: 2px solid #21618C;
+    border-radius: 10px;
+}
+
+section {
+    padding: 20px;
+    text-align: center ;
+}
+article {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 1rem;
+}
+p {
+    padding: 5px;
+}
+span{
+    margin: 2px;
+    font-size: 1.2rem;
+}
+.div-tarea-pendiente {
+    margin: 2rem;    
+    height: 40px;
+    background-color: #FADBD8;
+    border: 2px solid #943126;
+    border-radius: 15px;
+}
+
+.div-tarea-ahora {
+    margin: 2rem;    
+    height: 40px;
+    background-color: #FCF3CF;
+    border: 2px solid #9A7D0A;
+    border-radius: 15px;
+
+}
+.div-tarea-finalizada {
+    margin: 2rem;    
+    height: 40px;
+    background-color: #D4EFDF ;
+    border: 2px solid #196F3D;
+    border-radius: 15px;
+}
+.opciones {
+    display: flex;
+    justify-content: end;
+}
+.tareas {
+    display: flex;
+justify-content: space-between;
+
+}

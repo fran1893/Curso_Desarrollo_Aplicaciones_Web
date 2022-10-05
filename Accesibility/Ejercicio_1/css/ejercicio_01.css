@@ -1,0 +1,11 @@
+.main{
+    margin:0 auto;
+    width:800px;
+    height: 200px;
+    background-color: aquamarine;
+    padding: 4em;
+}
+
+#respuesta {
+    font-size: 3em;
+}

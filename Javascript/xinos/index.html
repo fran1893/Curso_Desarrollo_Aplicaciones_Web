@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Xinos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Juego de los "Chinos"</h1>
+
+        <p id="instrucciones">Es un juego de azar que consiste en intentar adivinar el número total de monedas que
+            varios jugadores (al
+            menos dos) guardan en su mano cerrada. Se utilizan tres monedas por jugador y se pueden sacar 0, 1, 2 o
+            3 monedas. Gana quien acierta el total de monedas.
+        </p>
+
+        <div class="centrar">
+            <button id="partida" class="button" onclick="primeraPartida()">Iniciar el Juego</button>
+        </div>
+
+        <div id="tablero">
+            <p id="elegir"></p>
+
+            <div class="imagenes">
+                <img class="monedas" src="img/cap.jpg" alt="Ninguna" onclick="jugar(0)">
+                <img class="monedas" src="img/una.jpg" alt="Una" onclick="jugar(1)">
+                <img class="monedas" src="img/dues.jpg" alt="Dos" onclick="jugar(2)">
+                <img class="monedas" src="img/tres.jpg" alt="Tres" onclick="jugar(3)">
+            </div>
+        </div>
+
+        <div id="final"></div>
+        <div id="ganador"></div>
+    </div>
+
+
+    <script src="js/xinos.js"></script>
+</body>
+
+</html>

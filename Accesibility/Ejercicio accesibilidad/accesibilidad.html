@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de accesibilidad</title>
+
+    <style>
+        .img-frutas {
+            width: 20%;
+        }
+
+        nav {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 7px;
+            align-items: center;
+
+        }
+
+        .nav_button {
+            font-size: 25px;
+            border: 5px solid rgb(39, 149, 20);
+            border-radius: 1.5em;
+            display: grid;
+            justify-items: center;
+
+        }
+
+        .nav_button:hover {
+            background-color: rgb(192, 195, 49);
+        }
+
+        .nav_button>a {
+            color: black;
+            text-decoration: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        main {
+            font-size: 1.5em;
+        }
+
+        .volver_arriba {
+            border: 5px solid rgb(39, 149, 20);
+            border-radius: 1.5em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <nav id="arriba">
+
+            <div class="nav_button"> <a href="#Parrafos">Ir a Párrafos </a></div>
+            <div class="nav_button"><a href="#Enlaces"> Ir a Enlaces </a></div>
+            <div class="nav_button"><a href="#Botones"> Ir a Botones </a></div>
+            <div class="nav_button"><a href="#Formulario_Satisfaccion"> Ir a Formulario</a></div>
+            <div class="nav_button"><a href="#Frutas"> Ir a Frutas </a></div>
+            <div class="nav_button"><a href="#abajo">Ir a la parte de Abajo</a></div>
+
+        </nav>
+
+        <h1>HTML accesible</h1>
+    </header>
+    <main>
+        <section>
+            <h2 id="Parrafos">Párrafos</h2>
+
+            <p tabindex="0">Tengo tabindex 3</p>
+            <p tabindex="0">Tengo tabindex 1</p>
+            <p tabindex="0">Tengo tabindex 2</p>
+            <button class="volver_arriba"><a href="#arriba">Volver a la parte de arriba</a></button>
+        </section>
+
+        <section>
+            <h2 id="Enlaces" tabindex="0">Enlaces</h2>
+
+            <p tabindex="0">Enlace a <a href="https://www.google.es/">Google</a></p>
+            <p tabindex="0">Enlace a <a href="https://www.google.es/">Microsoft</a></p>
+            <p tabindex="0" lang="en">Somewhere over the rainbow</p>
+            <button class="volver_arriba"><a href="#arriba">Volver a la parte de arriba</a></button>
+        </section>
+
+        <section>
+            <h2 tabindex="0" id="Botones">Botones</h2>
+            <button aria-label="Si haces click aquí iras a Google.com">Haz click aquí</button>
+            <button class="volver_arriba"><a href="#arriba">Volver a la parte de arriba</a></button>
+        </section>
+        <br>
+        <br>
+
+        <section>
+            <form action="" onsubmit="return enviarDatos()">
+
+                <fieldset role="form">
+                    <legend id="Formulario_Satisfaccion">Satisfacción</legend>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="Nombre" aria-required="true" required>
+                    <br><br>
+                    <label for="felicidad">¿Como estás?</label>
+                    <select name="felicidad" id="felicidad">
+                        <option value="feliz">Felíz</option>
+                        <option value="Contento">Contento</option>
+                        <option value="Triste">Triste</option>
+                        <option value="Muy triste">Muy triste</option>
+                    </select>
+                </fieldset>
+                <br><br>
+                <fieldset role="radiogroup">
+                    <legend>¿Tienes Calor?</legend>
+                    <input type="radio" name="pregunta" id="si" value="si">
+                    <label for="si">Si</label>
+                    <input type="radio" name="pregunta" id="no" value="no">
+                    <label for="no">No</label>
+                </fieldset>
+                <input id="botonFormulario" type="submit" value="Enviar Datos">
+            </FORM>
+            <button class="volver_arriba"><a href="#arriba">Volver a la parte de arriba</a></button>
+        </section>
+
+        <section>
+            <p tabindex="0" id="Frutas">frutas</p>
+            <a href="#" rel="noopener noreferrer" class="frutas" contenido="Manzana Roja a 3.5€">
+                <img src="manzana.jpg" alt="manzana roja" class="img-frutas">
+                <p>Manzana a 3.5€ el kilo</p>
+            </a>
+            <a href="#" rel="noopener noreferrer" class="frutas" contenido="platanos a 4.5€">
+                <img src="platanos.jpg" alt="Platanos de Canarias" class="img-frutas">
+                <p>Platanos a 4.50€ el kilo</p>
+            </a>
+        </section>
+        <br><br>
+
+        <p tabindex="0">La Manzana</p>
+
+        <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="manzana.jpg" alt="" class="img-frutas" aria-labelledby="manzanas">
+            <p>dddddddddddddddddddddddddddddddd</p>
+            <p>dddddddddddddddddddddddddddddddd</p>
+            <p>dddddddddddddddddddddddddddddddd</p>
+
+            <p id="manzanas">La manzana es el fruto comestible de la especie Malus domestica, el manzano común. Es una
+                fruta
+                pomácea de forma redonda y sabor muy dulce, dependiendo de la variedad. Los manzanos se cultivan en todo
+                el
+                mundo y son las especies más utilizadas del género Malus.</p>
+        </a>
+    </main>
+
+    <br><br><br>
+
+
+
+    <script>
+        const frutas = document.querySelectorAll(".frutas");
+        console.log(frutas[0].getAttribute("contenido"));
+
+        frutas.forEach(obtenerDatos);
+
+        function obtenerDatos(item) {
+            item.addEventListener("click", function () {
+                let valor = item.getAttribute("contenido");
+                alert("Has pedido " + valor);
+            })
+        }
+
+        function enviarDatos() {
+            let nombre = document.getElementById("nombre").value;
+            alert("Has escrito " + nombre)
+        }
+    </script>
+
+    <div class="nav_button"><a href="#arriba">Ir a la parte de arriba</a></div>
+    <a name="abajo"></a>
+
+    <footer>
+        <p>Derechos Reservados a Francisco Diaz</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do list</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Lista de tareas</h1>
+        </header>
+        <main>
+            <section>
+                <form action="" id="mi-formulario">
+                    <label for="tarea">Tarea</label>
+                    <br>
+                    <input type="text" id="tarea" name="tarea">
+                    <br><br>
+                    <button type="submit">OK !</button>
+                </form>
+            </section>
+            <section>
+                <article id="listaPendientes">
+                    <h2>PENDIENTES</h2>
+                    <div class=" tareas div-tarea-pendiente">
+                        <p class="p-tarea-pendiente">
+                            </p>
+                            <p class="opciones" >
+                            <span>🔽</span>
+                            <span>⏬</span>
+                            <span>❌</span>
+                        </p>
+                    </div>
+                </article>
+                <article id="listaAhora">
+                    <h2>AHORA</h2>
+                    <div class="tareas div-tarea-ahora">
+                        <p class="p-tarea-ahora">
+                        </p>
+                        <p class="opciones" >
+                            <span>🔽</span>
+                            <span>🔼</span>
+                            <span>❌</span>
+                        </p>
+                    </div>
+                </article>
+                <article id="listaFinalizada">
+                    <h2>FINALIZADAS</h2>
+                    <div class="tareas div-tarea-finalizada">
+                        <p class="p-tarea-finalizada">
+                        </p>
+                        <p class="opciones" >
+                            <span>🔼</span>
+                            <span>⏫</span>
+                            <span>❌</span>
+                        </p>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

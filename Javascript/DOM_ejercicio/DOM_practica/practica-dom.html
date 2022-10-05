@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica DOM</title>
+    <link rel="stylesheet" href="practica-dom.css">
+</head>
+
+<body>
+    <header>
+        <h1>Práctica DOM</h1>
+        <p><em>Instrucciones: resuelve los ejercicios solo con código Javascript</em></p>
+    </header>
+    <main>
+        <section>
+            <article class="prueba">
+                <div class="texto">
+                    <p>1. Añadir el ítem "green" al final de la lista.</p>
+                    <p>2. Quitar el ítem "coral" de la lista.</p>
+                    <p>3. Añadir el ítem "brown" en el tercer lugar de la lista.</p>
+                </div>
+
+                <ul class="colores-1">
+                    <li>blue</li>
+                    <li>red</li>
+                    <li>coral</li>
+                    <li>magenta</li>
+                    <li>aqua</li>
+                </ul>
+            </article>
+
+        </section>
+
+        <section>
+            <article class="prueba">
+                <div class="texto">
+                    <p> 4. En la siguiente lista hay que conseguir que cada ítem cambie de color de texto de manera
+                        consecutiva al hacer click. </p>
+                    <p> Es decir, al primer click, el texto del primer ítem se pondra
+                        "blue", con el segundo click el segundo ítem se pondra "red", etc. Después del último elemento
+                        vuelve a empezar por el primero.</p>
+                </div>
+                <ul class="colores-2">
+                    <li>blue</li>
+                    <li>red</li>
+                    <li>teal</li>
+                    <li>magenta</li>
+                    <li>aqua</li>
+                </ul>
+                <button id="button-2">Cambia los colores</button>
+            </article>
+        </section>
+
+        <section>
+            <article class="prueba">
+                <div class="texto">
+                    <p> 5. En la siguiente lista hay que conseguir que, al hacer click, cada ítem cambie de color de
+                        texto de manera automática y durante 0.5 segundos, de forma consecutiva: primero el azul, luego
+                        el rojo, etc.
+                    </p>
+                    <p> Al finalizar el recorrido se detiene el proceso (no vuelve a empezar).</p>
+                </div>
+                <ul class="colores-3">
+                    <li>blue</li>
+                    <li>red</li>
+                    <li>teal</li>
+                    <li>magenta</li>
+                    <li>aqua</li>
+                </ul>
+                <button id="button-3">Cambia los colores</button>
+            </article>
+        </section>
+
+        <section>
+            <article class="prueba">
+                <div class="texto">
+                    <p>6. En este formulario hay que mostrar la información en un alert, pero el botón solo debe estar
+                        activo si el selector "Acepto las condiciones" está marcado.</p>
+                </div>
+
+                <form id="mi-formulario" action="">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" type="text" name="nombre">
+                    <br><br>
+                    <label>
+                        <input type="checkbox" id="acepto" value="acepto">
+                        Acepto las condiciones
+                    </label>
+                    <br><br>
+                    <button disabled="disabled">Enviar</button>
+
+                    <br>
+                </form>
+            </article>
+        </section>
+
+        <section>
+            <article class="prueba">
+                <div class="texto">
+                    <p id="e-7">7. Al hace click sobre la imagen, recupera el valor de "tipo" contenido como atributo en
+                        ella y añádelo a la lista.</p>
+                </div>
+
+                <div id="imagen">
+                    <a href="#e-7">
+                        <img src="kiwi.jpg" alt="kiwi" tipo="kiwi">
+                    </a>
+                </div>
+
+                <ul id="frutas">
+                    <li>Manzana</li>
+                    <li>Fresa</li>
+                    <li>Cereza</li>
+                </ul>
+            </article>
+        </section>
+
+    </main>
+    <footer>
+        <p>Francisco Diaz</p>
+    </footer>
+</body>
+<script src="practica-dom.js"></script>
+
+</html>

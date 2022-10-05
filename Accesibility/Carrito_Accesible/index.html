@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El mejor carrito de compras">
+
+    <title>Carrito de compra</title>
+
+    <link rel="stylesheet" href="css/estils.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Carrito de la compra</h1>
+        <img src="img/compra.jpg" id="main-image" alt="" />
+
+        <div id="presentación">
+            <h2 tabindex="0">Compra la mejor fruta en nuestro supermercado online!</h2>
+
+            <p tabindex="0">Escoge la fruta que quieres haciendo click sobre su imagen</p>
+
+        </div>
+
+        <ul class="fruites">
+
+            <li tabindex="0">
+                <img class="imatges" src="img/aranja.png" alt="Pomelo: 2,50€ el kilogramo">
+                <p>Pomelo : 2,50€/kg</p>
+            </li>
+
+            <li tabindex="0">
+                <img class="imatges" src="img/kiwi.png" alt="Kiwi a 4,20€ el kilogramo">
+                <p>Kiwi : 4,20€/kg</p>
+            </li>
+
+            <li tabindex="0">
+                <img class="imatges" src="img/llimones.png" alt="Limones a 1,20€ el kilogramo">
+                <p>Limón : 1,20€/kg</p>
+            </li>
+
+            <li tabindex="0">
+                <img class="imatges" src="img/pinya.png" alt="Piña a 2,80€ la unidad">
+                <p>Piña : 2,8€/ud</p>
+            </li>
+
+            <li tabindex="0">
+                <img class="imatges" src="img/sindria.png" alt="Sandía a 1,20€ el kilogramo">
+                <p>Sandía : 1,20€/kg</p>
+            </li>
+
+        </ul>
+        <ul class="fruites">
+
+            <li tabindex="0">
+                <img class="imatges" src="img/manzana_roja.png" alt="Manzana Roja a 1,80€ el kilogramo">
+                <p>Manzana Roja : 1,80€/kg</p>
+            </li>
+
+            <li tabindex="0">
+                <img class="imatges" src="img/cerezas.png" alt="Cerezas a 6,40€ el kilogramo">
+                <p>Cerezas : 6,40€/kg</p>
+            </li>
+
+            <li tabindex="0">
+                <img class="imatges" src="img/melocotón.png" alt="Melocotón a 3,40€ el kilogramo">
+                <p>Melocotón : 3,40€/kg</p>
+            </li>
+
+            <li tabindex="0">
+                <img class="imatges" src="img/manzana_verde.png" alt="Manzana Verde a 2,20€ el kilogramo">
+                <p>Manzana Verde : 2,20€/ud</p>
+            </li>
+
+            <li tabindex="0">
+                <img class="imatges" src="img/melón.png" alt="Melón a 1,90€ el kilogramo">
+                <p>Melón: 1,90€/kg</p>
+            </li>
+
+        </ul>
+
+
+
+        <p tabindex="0"><strong>Total carrito:</strong></p>
+        <div id="carrito"></div>
+
+        <br>
+        <fieldset>
+            <legend tabindex="0">Déjanos una valoración aquí: </legend>
+            <br>
+            <label for="nombre">Dinos tu Nombre: </label>
+            <input type="text" id="nombre" name="nombre" size="10" maxlength="15"><br><br>
+            <label for="teléfono">Dinos tu número de teléfono: </label>
+            <input type="tel" id="teléfono" name="teléfono" size="10" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><br><br>
+            <label for="postal">Código Postal: </label>
+            <input type="text" id="postal" name="postal" size="10" maxlength="5"><br><br>
+            <label for="correo">Déjanos tu correo:</label>
+            <input type="email" id="correo" name="correo" size="10" maxlength="20">
+
+        </fieldset><br>
+        <fieldset>
+            <legend tabindex="0">¿Cómo nos ha conocido?</legend>
+            <input type="checkbox" id="amigos" name="conocido" value="amigos">
+            <label for="amigos">Amigos</label>
+            <input type="checkbox" id="prensa" name="conocido" value="prensa">
+            <label for="prensa">Prensa</label>
+            <input type="checkbox" id="web" name="conocido" value="web">
+            <label for="web">Web</label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend tabindex="0">Mercado</legend>
+            <label for="compra">¿Has logrado comprar lo que querias?: </label>
+            <select id="compra" name="compra">
+                <optgroup>
+                    <option value="Si">Si, lo he logrado</option>
+                    <option value="En parte">Solo una parte</option>
+                    <option value="No">No lo he logrado</option>
+                </optgroup>
+            </select>
+        </fieldset><br>
+
+        <fieldset>
+            <legend tabindex="0">¿Eres un nuevo cliente?</legend>
+            <input type="radio" id="nuevo" name="cliente" value="si">
+            <label for="nuevo">Si</label>
+            <input type="radio" id="antiguo" name="cliente" value="no">
+            <label for="antiguo">No</label>
+        </fieldset><br>
+
+
+        <fieldset role="radiogroup">
+            <legend>A continuación, elige tu nivel de satisfacción:</legend>
+            <input type="radio" id="muy_satisfecho" name="satisfacción" value="MUY">
+            <label for="muy_satisfecho">Muy Satisfecho</label>
+            <br>
+            <input type="radio" id="satisfecho" name="satisfacción" value="SAT">
+            <label for="satisfecho">Satisfecho</label>
+            <br>
+            <input type="radio" id="neutral" name="satisfacción" value="NEU">
+            <label for="neutral">Neutral</label>
+            <br>
+            <input type="radio" id="no_satisfecho" name="satisfacción" value="NOS">
+            <label for="no_satisfecho">No Satisfecho</label>
+            <br>
+            <input type="radio" id="muy_poco_satisfecho" name="satisfacción" value="MPS">
+            <label for="muy_poco_satisfecho">Muy poco satisfecho</label> <br>
+
+            <br> <input class="enviar" type="submit" value="Enviar Valoración" alt="Enviar Valoración">
+        </fieldset>
+        <!--
+            Añade un formulario para pedir una valoración.
+            Necesitamos dos campos: 
+                1) Nombre (input)
+                2) Valoración (con radiobutton)
+                3) botón de envío con fondo color 
+        -->
+    </div>
+    <br>
+    <footer tabindex="0">Carrito de compra accesible hecho por Francisco Diaz</footer>
+
+    <script src="js/carrito.js"></script>
+</body>
+
+
+
+
+
+</html>
