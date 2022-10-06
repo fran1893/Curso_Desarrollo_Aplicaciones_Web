@@ -65,17 +65,6 @@ DELIMITER //
 CREATE FUNCTION cuantosAnyos (id INT(10)) RETURNS INT
 BEGIN
 DECLARE resultado int;
-SELECT CURRENT_DATE - fecha_nacimiento FROM persona WHERE id_alumno = id INTO resultado;       -- NO FUNCIONA ESTA FUNCION, ES UN INTENTO
-RETURN resultado;
-END //
-
-DELIMITER;
-
-DELIMITER //
-
-CREATE FUNCTION cuantosAnyos (id INT(10)) RETURNS INT
-BEGIN
-DECLARE resultado int;
 SELECT persona.nombre, YEAR(CURDATE())-YEAR(persona.fecha_nacimiento) + IF(DATE_FORMAT(CURDATE(),'%m-%d') >
  DATE_FORMAT(persona.fecha_nacimiento,'%m-%d'), 0 , -1 ) AS edad_actual FROM persona WHERE id_alumno=id;
 RETURN resultado;
