@@ -5,37 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Calculadora</title>
 </head>
 
 <body>
+    <h1>No se puede dividir por cero!</h1>
 
     <p id="resultado">0.00</p>
-
-    <form>
-        <label for="valor_1">Valor 1</label>
+    <form action="">
+        <label for="valor_1">Primer valor: </label>
         <input type="number" id="valor_1">
-        <label for="valor_2">Valor 2</label>
+        <br>
+        <label for="valor_2">Segundo valor: </label>
         <input type="number" id="valor_2">
-
-        <p>
+        <br>
+        <fieldset>
+            <legend>Elegir Operación:</legend>
+            <input type="radio" id="suma" name="operacion" value="suma">
             <label for="suma">Suma</label>
-            <input type="radio" name="operacion" value="suma" id="suma">
-
+            <br>
+            <input type="radio" id="resta" name="operacion" value="resta">
             <label for="resta">Resta</label>
-            <input type="radio" name="operacion" value="resta" id="resta">
-
+            <br>
+            <input type="radio" id="multiplicacion" name="operacion" value="multiplicacion">
             <label for="multiplicacion">Multiplicación</label>
-            <input type="radio" name="operacion" value="multiplicacion" id="multiplicacion">
-
+            <br>
+            <input type="radio" id="division" name="operacion" value="division">
             <label for="division">División</label>
-            <input type="radio" name="operacion" value="division" id="division">
-        </p>
-
-        <input id="boton" type="button" value="Calcular" />
+            <br>
+            <button type="button" onclick="calculadora()">Resultado</button>
+        </fieldset>
     </form>
-
-    <script src="java.js"></script>
+    <script src="calculadora.js"></script>
 </body>
 
 </html>
