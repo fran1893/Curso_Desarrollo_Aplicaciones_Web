@@ -31,7 +31,7 @@ export default class ApiRest {
             objetoDOM.innerHTML += `
             <div class="col col-sm-4">
             <div class="card">
-                <img src="${listaPokemon.sprites.other.dream_world.front_default}" class="card-img-top" alt="...">
+                <img src="${listaPokemon.sprites.other["official-artwork"].front_default}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Nombre:  ${listaPokemon.name}</h5>
                     <p class="card-text">Tipo:  ${listaPokemon.types[0].type.name}</p>
