@@ -30,7 +30,7 @@ export default class ApiRest {
 
         objetoDOM.innerHTML = `
                 <h1 class="text-center">${listaTiempo.name} / ${listaTiempo.sys.country}</h1>
-                <h2 class="text-center">${listaTiempo.weather[0].main}</h2>
+                <h2 class="text-center">${listaTiempo.weather[0].main} <img src="http://openweathermap.org/img/wn/${listaTiempo.weather[0].icon}@2x.png" alt=""></h2>
                 <h3 class="text-center">${listaTiempo.main.temp} ºC</h3>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item text-center">Humedad: ${listaTiempo.main.humidity}%</li>
