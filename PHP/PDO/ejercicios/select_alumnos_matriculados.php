@@ -8,7 +8,7 @@ try {
     $sql_select = $pdoConnection->prepare($select_alumnos_matriculados);
     $sql_select->execute();
 
-    $resultado = $sql_select->fetchAll();
+    $resultado = $sql_select->fetchAll(PDO::FETCH_ASSOC);
 
     print_r($resultado);
 } catch (PDOException $e) {
