@@ -1,0 +1,38 @@
+Necesitamos que en ficheros distintos tengamos...
+
+
+SELECT que
+
+muestre todos los profesores
+
+muestre solo los alumnos matriculados
+
+muestre los alumnos matriculados ordendado por año de inicio descendente (de mayor a menor
+
+
+
+INSERT que
+
+para matricular un alumno : datos del alumno + asignatura + curso (año inicio y final)
+
+para añadir las asignaturas de NODE.JS, Servidores y Criptografia que realizará la profesora Esther Spencer
+(hay que hacerlo con joins, nada de utilizar los ids directamente)
+
+inserta el profesor John Le Carré que dará clases de NODE.JS
+
+
+UPDATE que ...
+
+ahora el profesor John Le Carré dará clases de criptografía
+
+actualiza el nombre de un profesor a partir de su nombre. Prueba con Manolo Hamill, que pasará a llamarse Paco Hamill.
+
+actualiza la ciudad del alumno con NIF 79089577Y para que sea París
+
+
+DELETE que ..
+
+borra el profesor Alejandro Kohler
+
+borra un alumno matriculado a partir de su nif
+
