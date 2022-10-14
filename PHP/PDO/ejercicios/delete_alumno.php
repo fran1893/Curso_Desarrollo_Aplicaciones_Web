@@ -2,8 +2,8 @@
 
 require_once '../pdo_connection.php';
 
-$delete_alumno_asignatura = "DELETE FROM `alumno_asignatura_curso` WHERE id_alumno = 1;";   
-$delete_alumno = "DELETE FROM `alumnos` WHERE nif = '26902806M'";
+$delete_alumno_asignatura = "DELETE FROM `alumno_asignatura_curso` WHERE id_alumno = (SELECT DISTINCT ASI.id_alumno FROM alumno_asignatura_curso ASI JOIN alumnos A ON A.id_alumno = ASI.id_alumno WHERE A.nif = '26902806M');";   
+$delete_alumno = "DELETE FROM `alumnos` WHERE nif = '26902806M';";
 
 try {
     $sql_delete = $pdoConnection->prepare($delete_alumno_asignatura);
