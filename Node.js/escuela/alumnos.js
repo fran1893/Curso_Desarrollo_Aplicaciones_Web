@@ -1,7 +1,7 @@
 const alumnos = 
 [
 {"nombre":"Zoe","apellido":"Ramirez","ciudad":"Almería","fecha_nacimiento":"2005-08-19","sexo":"M"},
-{"nombre":"David","apellido":"Schmidt","ciudad":"Almería","fecha_nacimiento":"2004-12-25","sexo":"H"},
+{"nombre":"David","apellido":"Schmidt","ciudad":"Almería","fecha_nacimiento":"2004-10-20","sexo":"H"},
 {"nombre":"Cristina","apellido":"Lemke","ciudad":"Almería","fecha_nacimiento":"2005-01-06","sexo":"M"},
 {"nombre":"Esther","apellido":"Spencer","ciudad":"Almería","fecha_nacimiento":"1956-12-19","sexo":"M"},
 {"nombre":"Carmen","apellido":"Streich","ciudad":"Almería","fecha_nacimiento":"1958-10-15","sexo":"M"},

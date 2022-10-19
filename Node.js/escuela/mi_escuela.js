@@ -32,7 +32,7 @@ datos.datosAlumnos.forEach(
             let dia_milisegundos = 86400000;      // Cantidad de milisegundos en un día
             let diff_milisegundos = hoy - cumpleanos;
             let diff_dias = diff_milisegundos / dia_milisegundos;
-            let dias_faltantes = Math.round(6570 - diff_dias)    // 6570 son los días que hay en 18 años
+            let dias_faltantes = Math.round( 6574.365 - diff_dias)    // 6570 son los días que hay en 18 años
 
             console.log(`${alumno.nombre} ${alumno.apellido} tienes ${edad} y te faltan ${dias_faltantes} días para cumplir 18 años`);
         }
