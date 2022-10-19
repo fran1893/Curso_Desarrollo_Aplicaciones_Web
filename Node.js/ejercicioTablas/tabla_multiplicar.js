@@ -1,5 +1,4 @@
 const { argv } = require("process");
-const process = require("process");
 const fs = require('fs');
 
 
@@ -14,8 +13,6 @@ for(i=1; i<=10; i ++){
 
     
 tabla += `================================`;
-
-// console.log(tabla);
 
 
 fs.writeFile(`tabla_multiplicar_${argv[2]}.txt`, tabla, (error)=>{
