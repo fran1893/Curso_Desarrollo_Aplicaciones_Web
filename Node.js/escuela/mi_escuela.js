@@ -18,9 +18,9 @@ datos.datosAlumnos.forEach(
         let hoy = new Date();
         let cumpleanos = new Date(alumno.fecha_nacimiento);
         let edad = hoy.getFullYear() - cumpleanos.getFullYear();
-        let m = hoy.getMonth() - cumpleanos.getMonth();
+        let diff_meses = hoy.getMonth() - cumpleanos.getMonth();
 
-        if (m < 0 || (m === 0 && hoy.getDate() < cumpleanos.getDate())) {
+        if (diff_meses < 0 || (diff_meses === 0 && hoy.getDate() < cumpleanos.getDate())) {
             edad--;
         }
         // Función que indique para los alumnos menores de edad
@@ -32,7 +32,7 @@ datos.datosAlumnos.forEach(
             let dia_milisegundos = 86400000;      // Cantidad de milisegundos en un día
             let diff_milisegundos = hoy - cumpleanos;
             let diff_dias = diff_milisegundos / dia_milisegundos;
-            let dias_faltantes = Math.round( 6574.365 - diff_dias)    // 6570 son los días que hay en 18 años
+            let dias_faltantes = Math.round( 6574.365 - diff_dias)    // 6574.365 son los días que hay en 18 años
 
             console.log(`${alumno.nombre} ${alumno.apellido} tienes ${edad} y te faltan ${dias_faltantes} días para cumplir 18 años`);
         }
