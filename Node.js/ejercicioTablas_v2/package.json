@@ -8,5 +8,8 @@
     "tm3": "node app 3"
   },
   "author": "Francisco Diaz",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }
