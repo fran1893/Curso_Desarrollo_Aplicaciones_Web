@@ -1,0 +1,29 @@
+Tabla de multiplicar
+
+Necesitamos guardar las tablas de multiplicar de diferentes números.
+
+Es decir, el resultado esperado para el 1 sería: 
+
+================================
+== Tabla de multiplicar del 1 ==
+================================
+1 x 1 = 1
+1 x 2 = 2
+...
+1 x 9 = 9
+1 x 10 = 10
+================================
+
+El fichero con la lógica se llamará tabla_multiplicar.
+
+Se creará como salida un fichero de nombre tabla_multiplicar_numero.txt, donde número será el operador elegido.
+
+Para el 1 : tabla_multiplicar_1.txt. Para el 2: tabla_multiplicar_2.txt.
+
+Para elegir el operador se utiliza la sintaxis :
+
+node tabla_multiplicar numero
+
+donde número será igualmente el operador elegido.
+
+Se envía con algunos ejemplos en un zip de esta manera: tuNombre_tabla_multiplicar_Node.zip 
