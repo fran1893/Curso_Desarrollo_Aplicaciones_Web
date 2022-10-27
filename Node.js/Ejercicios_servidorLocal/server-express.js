@@ -119,7 +119,7 @@ app.get('/api/ciudad/:ciudadCliente', (req, res) => {
 app.get('/api/frutas/:temporada', (req, res) => {
   const temporada = req.params.temporada
 
-  const resultadoTemporada = datosEmpresa.frutas.filter((frutas) => frutas.temporada == temporada)
+  const resultadoTemporada = datosEmpresa.productos.filter((frutas) => frutas.temporada == temporada)
 
   // Chequeo que existan frutas de esa temporada
   if (resultadoTemporada != 0) {
