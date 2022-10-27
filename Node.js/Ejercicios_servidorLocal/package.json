@@ -1,0 +1,14 @@
+{
+  "name": "carrito",
+  "version": "1.0.0",
+  "description": "Carrito de Compras",
+  "main": "server-express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francisco",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

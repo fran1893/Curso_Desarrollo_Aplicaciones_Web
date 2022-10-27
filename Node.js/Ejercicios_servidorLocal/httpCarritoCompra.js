@@ -2,6 +2,7 @@
 const { createServer } = require('http');
 const { createReadStream } = require('fs');
 const path = require('path');
+const { count } = require('console');
 
 // Puerto de conexión
 const { puerto = 4000 } = process.env;     // En el caso de que el puerto 3000 no este disponible buscara otro.
@@ -16,7 +17,7 @@ const IMG_CONTENT_TYPE_PNG = 'image/png';
 
 
 // Construir la ruta de los ficheros a devolver con la petición
-const DIR_HTML = path.join(__dirname, 'Servidor_CarritoCompra');
+const DIR_HTML = path.join(__dirname, 'static');
 console.log(DIR_HTML);
 
 
@@ -30,8 +31,10 @@ const server = createServer((req, res) => {
     let contentType = HTML_CONTENT_TYPE;
     // Preparamos el flujo para la lectura de los ficheros
     let stream;
+    let contadorPeticiones = 1;
     // Inicio desde la ruta raíz
     if (url === '/') {
+        console.log("Peticiones: ", contadorPeticiones++)
         // Creamos el flujo para la lectura del fichero html
         stream = createReadStream(`${DIR_HTML}/index.html`)
     }
@@ -47,8 +50,6 @@ const server = createServer((req, res) => {
     }
     else if (url.match("\.jpg$")) {
         contentType = IMG_CONTENT_TYPE_JPG;
-        
-        console.log(url.match("\.jpg$"))
         // Creamos el flujo para la lectura de los ficheros imagenes JPG
         stream = createReadStream(`${DIR_HTML}${url}`)
     }
