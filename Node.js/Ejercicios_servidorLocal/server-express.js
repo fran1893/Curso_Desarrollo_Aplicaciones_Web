@@ -1,6 +1,6 @@
 // Carga el package en memoria
 const express = require('express');
-const fs = require('fs')
+const fs = require('fs');
 // Asignamos la función a una variable
 const app = express();
 
@@ -100,18 +100,6 @@ app.get('/api/nombreyciudad/:nombreClienteParam/:nombreCiudadParam', (req, res) 
 })
 
 
-app.get('/api/ciudad/:ciudadCliente', (req, res) => {
-  const ciudadCliente = req.params.ciudadCliente
-
-  const resultadoCiudad = datosEmpresa.clientes.filter((clientes) => clientes.ciudad == ciudadCliente)
-
-  // Chequeo que exista la ciudad
-  if (resultadoCiudad != 0) {
-    res.send(JSON.stringify(resultadoCiudad))
-  } else {
-    res.send(`<p>No existe cliente en la ciudad de <span style="color: red; font-size: 30px">${ciudadCliente}</span></p>`)
-  }
-})
 
 
 
