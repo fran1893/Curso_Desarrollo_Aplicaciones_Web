@@ -1,0 +1,15 @@
+{
+  "name": "escuela_v2",
+  "version": "0.0.1",
+  "description": "Obtener y guardar notas y asistencias de alumnos para generar un informe",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tm3": "node app"
+  },
+  "author": "Francisco",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^17.6.0"
+  }
+}

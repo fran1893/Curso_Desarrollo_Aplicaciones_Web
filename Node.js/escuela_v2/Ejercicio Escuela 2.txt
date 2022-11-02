@@ -1,0 +1,90 @@
+Ejercicio Escuela #2
+Lee completa la relación de requisitos antes de empezar a desarrollar la solución y 
+no te olvides de incluir tu nombre al principio de cada fichero Javascript
+así : // Tu Nombre
+
+
+REQUISITOS DEL PROYECTO:
+
+Necesitamos obtener y guardar las notas y asistencia de los alumnos para obtener
+un informe con ellos.
+Utilizaremos el nombre completo de los alumnos como referencia.
+
+1. La aplicación recibirá las calificaciones de los alumnos
+de esta forma:
+node app -n "Zoe Ramirez" -c 9
+También admitiremos el argumento completo:
+node app --nombre "Zoe Ramirez" -calificacion 9
+
+1.1. Verificar que exista el alumno. 
+Si no está en la lista advertirlo y cerrar el programa.
+
+1.2. Las notas se guardarán en un fichero JSON llamado "calificaciones.json",
+con esta estructura:
+{ "Zoe Ramirez" : 9, "David Schmidt": 6, ... }
+No habrá alumnos duplicados. Si se vuelve a introducir la nota de un alumno
+hay que cambiar la que había antes.
+Es decir, si introducimos primero:
+node app -n "Zoe Ramirez" -c 9
+El fichero JSON queda así:
+{ "Zoe Ramirez" : 9, "David Schmidt": 6, ... }
+Y después:
+node app -n "Zoe Ramirez" -c 7
+EL JSON cambia a 
+{ "Zoe Ramirez" : 7, "David Schmidt": 6, ... }
+
+
+2. La aplicación recibirá la asistencia a clase de los alumnos
+Utilizaremos su nombre como referencia.
+
+2.1. Pondremos las faltas de asistencia de esta forma
+node app -n "Zoe Ramirez" -p 21-10-2022
+o
+node app --nombre "Zoe Ramirez" --ponfalta 21-10-2022
+
+2.2. Y las quitaremos de esta forma
+node app -n "Zoe Ramirez" -q 21-10-2022
+o
+node app --nombre "Zoe Ramirez" --quitafalta 21-10-2022
+(si se intenta quitar una falta inexistente avisar del error)
+
+2.3. Las faltas se guardarán en un fichero JSON llamado "faltas.json"
+con esta estructura:
+{ "Zoe Ramirez" : ["18-10-2022", "21-10-2022"], "David Schmidt": ...}
+ 
+2.4. Igualmente hay que advertir del error si se introduce el nombre
+de un alumno que no está en la lista. 
+
+
+3. Finalmente debemos poder generar un informe actualizado, como fichero txt.
+En el aparecerán todos los alumnos, tanto si tienen calificaciones o faltas
+como si no.
+
+3.1. Tendrá este contenido:
+
+Alumnado del curso 
+------------------
+
+Zoe Ramirez
+calificación: 9
+Faltas de asistencia: 18-10-2022, 21-10-2022
+
+
+David Schmidt
+calificación: 6
+Faltas de asistencia: ninguna
+ 
+...
+hasta el último alumno.
+
+3.2. Cuando no consten faltas de asistencia pondremos: "ninguna"
+3.3. Cuando no consten calificaciones pondremos: "pendiente"
+
+Para generar el informe txt pondremos en la consola:
+
+node app -i
+o
+node app --informe
+
+
+=====================================================================================
