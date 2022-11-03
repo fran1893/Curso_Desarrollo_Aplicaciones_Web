@@ -1,0 +1,24 @@
+Ejercicio Node - MySQL
+
+Con la base de datos anexa, has de crear un proyecto que permita:
+
+1) Ver todos los pacientes mediante la ruta
+http://localhost:3000/api/pacientes
+
+2) Filtrar los pacientes por su NIF
+http://localhost:3000/api/pacientes/nif
+
+3) Añadir pacientes por post en la url
+http://localhost:3000/api/pacientes
+
+4) Modificar pacientes por patch en la url
+http://localhost:3000/api/pacientes/nif
+
+4) Borrar pacientes por delete en la url
+http://localhost:3000/api/pacientes/nif
+
+5) Mostrar la cantidad de pacientes de cada género en la url
+http://localhost:3000/api/genero
+
+6) Mostrar los pacientes ordenados por apellido en la url
+http://localhost:3000/api/apellidos
