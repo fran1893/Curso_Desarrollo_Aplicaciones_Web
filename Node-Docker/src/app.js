@@ -5,6 +5,8 @@ const morgan = require('morgan');
 
 const app = express();
 
-app.arguments(morgan('dev'));
+app.use(morgan('dev'));
+
+app.use(require('./routes/route.js'));
 
 module.exports = app
