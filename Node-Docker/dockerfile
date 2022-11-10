@@ -5,3 +5,8 @@ FROM node:19
 WORKDIR /app
 
 COPY package*.json ./
+
+RUN npm install
+
+# COPY /src/ /app/       Con esto copiaria solo la carpeta src  con la sentencia de abajo copia todo menos lo que ponemos en .dockerignore
+COPY . .
