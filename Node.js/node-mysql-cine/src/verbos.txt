@@ -1,0 +1,5 @@
+get     <--> select  <--> mostrar
+post    <--> insert  <--> insertar, crear
+put     <--> update  <--> modificar todos los valores de una fila
+patch   <--> update  <--> modificar los valores de una fila uno a uno
+delete  <--> delete  <--> eliminar registros
