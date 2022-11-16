@@ -9,13 +9,22 @@ app.use(cookieParser())
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/setcookie', (req, res) =>{
+app.get('/setcookie', (req, res) => {
     res.cookie(
         "theme",
-        "dark"
+        "dark",
+        {
+            maxAge: 60 * 60000000000,
+            sameSite: 'lax',
+            // expires: new Date ('2022-11-17')
+        }
     )
     res.send('SetCookies')
 })
 
+app.get('/getcookie', (req, res)=>{
 
-app.listen(3000, ()=> console.log('Server Running...'))
+    console.log(req.cookies);
+})
+
+app.listen(3000, () => console.log('Server Running...'))
