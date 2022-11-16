@@ -24,7 +24,7 @@ app.get('/setcookie', (req, res) => {
 
 app.get('/getcookie', (req, res)=>{
 
-    console.log(req.cookies);
+    console.log(req.cookies)
 })
 
 app.listen(3000, () => console.log('Server Running...'))
