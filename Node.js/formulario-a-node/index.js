@@ -6,4 +6,7 @@ const PORT = 4000;
 
 
 
-app.listen(puerto, ()=>{console.log(`Escuchando por el puerto ${puerto}`)});
+
+
+
+app.listen(PORT, ()=>{console.log(`Escuchando por el puerto ${PORT}`)});
