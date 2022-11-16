@@ -3,9 +3,10 @@ const app = express();
 
 const PORT = 4000;
 
+app.use(express.static('public'));
 
 app.post('/formulario',(req, res)=>{
-    
+
 })
 
 
