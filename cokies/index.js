@@ -11,8 +11,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/setcookie', (req, res) => {
     res.cookie(
-        "theme",
-        "dark",
+        "login",
+        "true",
         {
             maxAge: 60 * 60000000000,
             sameSite: 'lax',
