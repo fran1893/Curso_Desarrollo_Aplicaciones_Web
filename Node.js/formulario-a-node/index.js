@@ -4,7 +4,9 @@ const app = express();
 const PORT = 4000;
 
 
-
+app.post('/formulario',(req, res)=>{
+    
+})
 
 
 
