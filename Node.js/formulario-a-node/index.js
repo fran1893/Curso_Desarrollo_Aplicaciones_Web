@@ -7,7 +7,9 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 app.post('/formulario', async (req, res) => {
-    res.json(req.body)
+    res.send(`<h1>Bienvenido ${req.body.nombre}!</h1>
+    <h2>tu correo es ${req.body.email}</h2>
+    <h3>Y tu mensaje para nosotros fue: ${req.body.texto}</h3>`)
 })
 
 
