@@ -94,54 +94,54 @@ if ($_GET) {
             <!-- Recupera la información de cada fila -->
             <?php foreach ($resultado as $fila) :  ?>
 
-                <!-- en el div reproduce el color y fondo capturados de la BD -->
-                <div class="filas" style="
+            <!-- en el div reproduce el color y fondo capturados de la BD -->
+            <div class="filas" style="
                 color:<?= $fila["color"] ?>; 
                 background-color:<?= $fila["background"] ?>;
                 ">
-                    <p>
-                        <!-- Botón para Editar el color y el fondo, creando $_GET -->
-                        <a href="index.php?id=<?= $fila["id"] ?>">E</a>
-                        <!-- Botón para borrar el div a partir de su id -->
-                        <a href="eliminar.php?id=<?= $fila["id"] ?>">B</a>
-                        Color:<?= $fila["color"] ?> - Fondo: <?= $fila["background"] ?>
-                    </p>
-                </div>
+                <p>
+                    <!-- Botón para Editar el color y el fondo, creando $_GET -->
+                    <a href="index.php?id=<?= $fila["id"] ?>">E</a>
+                    <!-- Botón para borrar el div a partir de su id -->
+                    <a href="eliminar.php?id=<?= $fila["id"] ?>">B</a>
+                    Color:<?= $fila["color"] ?> - Fondo: <?= $fila["background"] ?>
+                </p>
+            </div>
             <?php endforeach ?>
         </div>
         <div id="right">
             <?php if (!$_GET) : ?>
-                <!-- Formulario para añadir filas por el método POST-->
-                <form method="POST">
-                    <fieldset>
-                        <legend>Agregar fila</legend>
-                        <label for="color">Color:</label>
-                        <input id="color" type="text" name="color">
-                        <br><br>
-                        <label for="background">Fondo:</label>
-                        <input id="background" type="text" name="background">
-                        <br><br>
-                        <button class="boton">Agregar fila</button>
-                    </fieldset>
-                </form>
+            <!-- Formulario para añadir filas por el método POST-->
+            <form method="POST">
+                <fieldset>
+                    <legend>Agregar fila</legend>
+                    <label for="color">Color:</label>
+                    <input id="color" type="text" name="color">
+                    <br><br>
+                    <label for="background">Fondo:</label>
+                    <input id="background" type="text" name="background">
+                    <br><br>
+                    <button class="boton">Agregar fila</button>
+                </fieldset>
+            </form>
             <?php endif ?>
 
             <!-- Este formulario se mostrará cuando se oprima un botón E  -->
             <?php if ($_GET) : ?>
-                 <!-- Formulario para editar filas por el método GET-->
-                <form method="GET" action="editar.php">
-                    <fieldset>
-                        <legend>Editar fila</legend>
-                        <label for="color">Color:</label>
-                        <input id="color" type="text" name="color" value="<?= $resultado_color['color'] ?>">
-                        <br><br>
-                        <label for="background">Fondo:</label>
-                        <input id="background" type="text" name="background" value="<?= $resultado_color['background'] ?>">
-                        <br><br>
-                        <input type="hidden" name="id" value="<?= $resultado_color['id'] ?>">
-                        <button class="boton">Editar fila</button>
-                    </fieldset>
-                </form>
+            <!-- Formulario para editar filas por el método GET-->
+            <form method="GET" action="editar.php">
+                <fieldset>
+                    <legend>Editar fila</legend>
+                    <label for="color">Color:</label>
+                    <input id="color" type="text" name="color" value="<?= $resultado_color['color'] ?>">
+                    <br><br>
+                    <label for="background">Fondo:</label>
+                    <input id="background" type="text" name="background" value="<?= $resultado_color['background'] ?>">
+                    <br><br>
+                    <input type="hidden" name="id" value="<?= $resultado_color['id'] ?>">
+                    <button class="boton">Editar fila</button>
+                </fieldset>
+            </form>
             <?php endif ?>
 
 
